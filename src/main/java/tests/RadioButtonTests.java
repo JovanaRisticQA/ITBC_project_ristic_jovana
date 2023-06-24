@@ -12,7 +12,7 @@ public class RadioButtonTests extends BaseTests {
     }
 
     @Test
-    public void verifyUserCanSelectYesButton() {
+    public void verifyUserCanSelectYesButton(){
         getRadioButtonPage().selectYesBtn();
         Assert.assertTrue(getRadioButtonPage().getYouHaveSelectedYesMSG().isDisplayed());
     }

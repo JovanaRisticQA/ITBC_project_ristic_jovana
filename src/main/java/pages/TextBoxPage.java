@@ -122,9 +122,8 @@ public class TextBoxPage extends BasePage {
     /**
      * Go to Text Box Page
      */
-    public TextBoxPage goToPage(){
+    public void goToPage(){
         getDriver().get("https://demoqa.com/text-box");
-        return this;
     }
 
 }

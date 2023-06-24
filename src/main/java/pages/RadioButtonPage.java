@@ -78,8 +78,7 @@ public class RadioButtonPage extends BasePage {
     /**
      * Go to Radio Buttons Page
      */
-    public RadioButtonPage goToPage(){
+    public void goToPage(){
         getDriver().get("https://demoqa.com/radio-button");
-        return this;
     }
 }

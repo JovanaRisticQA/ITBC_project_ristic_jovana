@@ -122,9 +122,8 @@ public class RegisterToBookStorePage extends BasePage {
     /**
      * Go to Bookstore Registration Page
      */
-    public RegisterToBookStorePage goToPage(){
+    public void goToPage(){
         getDriver().get("https://demoqa.com/register");
-        return this;
     }
 
 }

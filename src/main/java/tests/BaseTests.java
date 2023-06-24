@@ -28,6 +28,7 @@ public class BaseTests {
     private ToolTipsPage toolTipsPage;
     private SelectablePage selectablePage;
     private TextBoxPage textBoxPage;
+    private UploadAndDownloadPage uploadAndDownloadPage;
 
     /**
      * Faker and Faker-generated data
@@ -59,6 +60,7 @@ public class BaseTests {
         toolTipsPage = new ToolTipsPage(driver, wait, action, js);
         selectablePage = new SelectablePage(driver, wait, js);
         textBoxPage = new TextBoxPage(driver, wait, js);
+        uploadAndDownloadPage = new UploadAndDownloadPage(driver, wait);
     }
 
     /**
@@ -67,23 +69,33 @@ public class BaseTests {
     public WebDriver getDriver() {
         return driver;
     }
+
+
     public RadioButtonPage getRadioButtonPage() {
         return radioButtonPage;
     }
+
     public RegisterToBookStorePage getRegisterToBookStorePage(){
         return registerToBookStorePage;
     }
+
     public ButtonsPage getButtonsPage(){
         return buttonsPage;
     }
+
     public ToolTipsPage getToolTipsPage(){
         return toolTipsPage;
     }
+
     public SelectablePage getSelectablePage(){
         return selectablePage;
     }
+
     public TextBoxPage getTextBoxPage() {
         return textBoxPage;
+    }
+    public UploadAndDownloadPage getUploadAndDownloadPage(){
+        return uploadAndDownloadPage;
     }
 
     public String getFirstName() {
@@ -117,6 +129,7 @@ public class BaseTests {
     public String getPermanentAddress() {
         return permanentAddress;
     }
+
 
     @AfterClass
     public void cleanUp(){

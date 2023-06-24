@@ -99,9 +99,8 @@ public class ButtonsPage extends BasePage {
     /**
      * Go to Buttons Page
      */
-    public ButtonsPage goToPage(){
+    public void goToPage(){
         getDriver().get("https://demoqa.com/buttons");
-        return this;
     }
 
 }

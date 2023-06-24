@@ -126,9 +126,8 @@ public class SelectablePage extends BasePage {
     /**
      * Go to Selectable Page
      */
-    public SelectablePage goToPage(){
+    public void goToPage(){
         getDriver().get("https://demoqa.com/selectable");
-        return this;
     }
 
 }
