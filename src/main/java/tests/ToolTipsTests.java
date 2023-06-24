@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class ToolTipsTests extends BaseTests {
 
     @BeforeMethod
-    public void beforeThisClass(){
+    public void beforeEachMethod(){
         getToolTipsPage().goToPage();
     }
 

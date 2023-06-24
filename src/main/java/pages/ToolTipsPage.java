@@ -51,6 +51,8 @@ public class ToolTipsPage extends BasePage {
         numberLink = getDriver().findElement(By.linkText("1.10.32"));
         return numberLink;
     }
+    //setTimeout(()=> {debugger},5000)    -- add to console to “freeze” the browser
+                                         // (it will be easier to get selectors for Tool Tips)
     public WebElement getYouHoveredOverTheButtonTooltip(){
         youHoveredOverTheButtonMessage = getDriver().findElement(
                 By.xpath("//div[text()='You hovered over the Button']"));
@@ -76,7 +78,6 @@ public class ToolTipsPage extends BasePage {
     /**
      * Tool Tips Hover Methods
      */
-    //setTimeout(()=> {debugger},5000)  -- add to console to “freeze” the browser
     public ToolTipsPage hoverOnButton(){
         getWait().until(ExpectedConditions.elementToBeClickable(getHoverToSeeMeButton()));
         getAction().moveToElement(getHoverToSeeMeButton()).perform();

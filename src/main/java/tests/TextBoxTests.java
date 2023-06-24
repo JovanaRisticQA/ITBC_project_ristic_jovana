@@ -6,26 +6,26 @@ import org.testng.annotations.Test;
 public class TextBoxTests extends BaseTests {
 
     @BeforeMethod
-    public void beforeThisClass(){
+    public void beforeEachMethod(){
         getTextBoxPage().goToPage();
     }
 
     @Test
     public void verifyUserCanFillInAllFields() {
-        getTextBoxPage().enterName(fullName)
-                .enterEmail(email)
-                .enterCurrentAddress(currentAddress)
-                .enterPermanentAddress(permanentAddress)
+        getTextBoxPage().enterName(getFullName())
+                .enterEmail(getEmail())
+                .enterCurrentAddress(getCurrentAddress())
+                .enterPermanentAddress(getPermanentAddress())
                 .clickSubmitButton()
-                .assertOutputShowsDataCorrectly(fullName, email, currentAddress, permanentAddress);
+                .assertOutputShowsDataCorrectly(getFullName(), getEmail(), getCurrentAddress(), getPermanentAddress());
     }
 
     @Test
-    public void verifyUserHasToEnterValidEmailFormat() throws InterruptedException {
-        getTextBoxPage().enterName(fullName)
+    public void verifyUserHasToEnterValidEmailFormat() {
+        getTextBoxPage().enterName(getFullName())
                 .enterEmail("x")
-                .enterCurrentAddress(currentAddress)
-                .enterPermanentAddress(permanentAddress)
+                .enterCurrentAddress(getCurrentAddress())
+                .enterPermanentAddress(getPermanentAddress())
                 .clickSubmitButton()
                 .assertFormRequiresValidEmailFormat();
     }

@@ -32,15 +32,15 @@ public class BaseTests {
     /**
      * Faker and Faker-generated data
      */
-    Faker faker = new Faker();
-    String firstName = faker.name().firstName();
-    String lastName = faker.name().lastName();
-    String fullName = faker.name().fullName();
-    String username = faker.name().username();
-    String password = faker.internet().password();
-    String email = faker.internet().emailAddress();
-    String currentAddress = faker.address().secondaryAddress();
-    String permanentAddress = faker.address().fullAddress();
+    private Faker faker = new Faker();
+    private String firstName = faker.name().firstName();
+    private String lastName = faker.name().lastName();
+    private String fullName = faker.name().fullName();
+    private String username = faker.name().username();
+    private String password = faker.internet().password();
+    private String email = faker.internet().emailAddress();
+    private String currentAddress = faker.address().secondaryAddress();
+    private String permanentAddress = faker.address().fullAddress();
 
 
     @BeforeClass
@@ -84,6 +84,38 @@ public class BaseTests {
     }
     public TextBoxPage getTextBoxPage() {
         return textBoxPage;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getCurrentAddress() {
+        return currentAddress;
+    }
+
+    public String getPermanentAddress() {
+        return permanentAddress;
     }
 
     @AfterClass

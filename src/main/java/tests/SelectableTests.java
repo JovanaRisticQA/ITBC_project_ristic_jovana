@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class SelectableTests extends BaseTests {
 
     @BeforeMethod
-    public void beforeThisClass(){
+    public void beforeEachMethod(){
         getSelectablePage().goToPage();
     }
 
@@ -32,5 +32,14 @@ public class SelectableTests extends BaseTests {
     public void verifyFourthItemIsSelectedUponClick(){
         getSelectablePage().clickFourthListItem()
                 .assertFourthItemChangesColorOnClick();
+    }
+
+    @Test
+    public void verifyAllItemsCanBeSelectedAtOnce(){
+        getSelectablePage().clickFirstListItem()
+                .clickSecondListItem()
+                .clickThirdListItem()
+                .clickFourthListItem()
+                .assertAllItemsAreSelected();
     }
 }

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class RadioButtonTests extends BaseTests {
 
     @BeforeMethod
-    public void beforeThisClass(){
+    public void beforeEachMethod(){
         getRadioButtonPage().goToPage();
     }
 

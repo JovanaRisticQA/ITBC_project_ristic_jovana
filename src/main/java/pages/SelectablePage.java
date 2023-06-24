@@ -109,6 +109,19 @@ public class SelectablePage extends BasePage {
         return this;
     }
 
+    public SelectablePage assertAllItemsAreSelected(){
+        boolean firstItemIsSelected = "mt-2 list-group-item active list-group-item-action".equals(
+                getFirstListItem().getAttribute("class"));
+        boolean secondItemIsSelected = "mt-2 list-group-item active list-group-item-action".equals(
+                getSecondListItem().getAttribute("class"));
+        boolean thirdItemIsSelected = "mt-2 list-group-item active list-group-item-action".equals(
+                getThirdListItem().getAttribute("class"));
+        boolean fourthItemIsSelected = "mt-2 list-group-item active list-group-item-action".equals(
+                getFourthListItem().getAttribute("class"));
+        Assert.assertTrue(firstItemIsSelected && secondItemIsSelected && thirdItemIsSelected && fourthItemIsSelected);
+        return this;
+    }
+
 
     /**
      * Go to Selectable Page

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class ButtonsTests extends BaseTests {
 
     @BeforeMethod
-    public void beforeThisClass(){
+    public void beforeEachMethod(){
         getButtonsPage().goToPage();
     }
 

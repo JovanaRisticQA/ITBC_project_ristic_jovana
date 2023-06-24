@@ -12,46 +12,46 @@ public class RegisterToBookStoreTests extends BaseTests {
 
     @Test
     public void verifyFirstNameIsRequiredForRegistration() {
-        getRegisterToBookStorePage().enterLastName(lastName)
-                .enterUsername(username)
-                .enterPassword(password)
+        getRegisterToBookStorePage().enterLastName(getLastName())
+                .enterUsername(getUsername())
+                .enterPassword(getPassword())
                 .clickRegisterButton()
                 .assertFirstNameIsRequired();
     }
 
     @Test
     public void verifyLastNameIsRequiredForRegistration() {
-        getRegisterToBookStorePage().enterFirstName(firstName)
-                .enterUsername(username)
-                .enterPassword(password)
+        getRegisterToBookStorePage().enterFirstName(getFirstName())
+                .enterUsername(getUsername())
+                .enterPassword(getPassword())
                 .clickRegisterButton()
                 .assertLastNameIsRequired();
     }
 
     @Test
     public void verifyUsernameIsRequiredForRegistration() {
-        getRegisterToBookStorePage().enterFirstName(firstName)
-                .enterLastName(lastName)
-                .enterPassword(password)
+        getRegisterToBookStorePage().enterFirstName(getFirstName())
+                .enterLastName(getLastName())
+                .enterPassword(getPassword())
                 .clickRegisterButton()
                 .assertUsernameIsRequired();
     }
 
     @Test
     public void verifyPasswordIsRequiredForRegistration() {
-        getRegisterToBookStorePage().enterFirstName(firstName)
-                .enterLastName(lastName)
-                .enterUsername(username)
+        getRegisterToBookStorePage().enterFirstName(getFirstName())
+                .enterLastName(getLastName())
+                .enterUsername(getUsername())
                 .clickRegisterButton()
                 .assertPasswordIsRequired();
     }
 
     @Test
     public void verifyReCaptchaIsRequiredForRegistration() {
-        getRegisterToBookStorePage().enterFirstName(firstName)
-                .enterLastName(lastName)
-                .enterUsername(username)
-                .enterPassword(password)
+        getRegisterToBookStorePage().enterFirstName(getFirstName())
+                .enterLastName(getLastName())
+                .enterUsername(getUsername())
+                .enterPassword(getPassword())
                 .clickRegisterButton()
                 .assertVerifyReCaptchaIsDisplayed();
     }
