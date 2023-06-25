@@ -21,7 +21,7 @@ public class UploadAndDownloadPage extends BasePage {
     /**
      * Images
      */
-    private String imageDownloadPath = "C://Users//jovan//Downloads//";    //have to replace with your default download folder path
+    private String imageDownloadPath = "C://Users//jovan//Downloads//";
     private String downloadImageName;
     private File downloadImage;
     private String uploadImageName = "Image123.jpg";
