@@ -21,12 +21,12 @@ public class UploadAndDownloadPage extends BasePage {
     /**
      * Images
      */
-    private String imageDownloadPath = "C://Users//jovan//Downloads//";
+    private String imageDownloadPath = "C://Users//jovan//Downloads//"; //have to replace with your default download folder path
     private String downloadImageName;
     private File downloadImage;
     private String uploadImageName = "Image123.jpg";
     private File imageToUpload = new File(
-            "C://Users//jovan//IdeaProjects//ITBC_project_ristic_jovana//src//main//java//Images//Image123.jpg");
+            "src/main/java/Images/Image123.jpg");
 
 
     /**

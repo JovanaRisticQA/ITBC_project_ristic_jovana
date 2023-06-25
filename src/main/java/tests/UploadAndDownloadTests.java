@@ -11,13 +11,13 @@ public class UploadAndDownloadTests extends BaseTests {
         }
 
         @Test
-        public void verifyFileCanBeDownloaded() {
+        public void verifyImageCanBeDownloaded() {
             getUploadAndDownloadPage().clickDownloadBtn()
                     .assertFileIsDownloaded();
         }
 
         @Test
-        public void verifyFileCanBeUploaded() {
+        public void verifyImageCanBeUploaded() {
             getUploadAndDownloadPage().uploadImage()
                     .assertFileIsUploaded();
         }
